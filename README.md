@@ -11,8 +11,9 @@ Installation
 Add `getgrades` and `hsrmgradeformatter` to your `$PATH` and make it executable.
 Example (you need root powers for this one):
 ```
-# wget https://raw.githubusercontent.com/ -O /usr/local/bin/getgrades;
-# wget https://raw.githubusercontent.com/ -O /tmp/format-output.c;
+# wget https://raw.githubusercontent.com/jnboehm/getgrades/master/getgrades.pl -O /usr/local/bin/getgrades;
+# wget https://raw.githubusercontent.com/jnboehm/getgrades/master/hsrmformatter.c -O /tmp/hsrmformatter.c;
+# wget https://raw.githubusercontent.com/jnboehm/getgrades/master/hsrmformatter.h -O /tmp/hsrmformatter.h;
 # chmod +x /usr/local/bin/getgrades;
 # gcc -o /usr/local/bin/hsrmgradeformatter /tmp/hsrmgradeformatter.c
 ```
