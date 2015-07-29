@@ -70,4 +70,4 @@ foreach $row ($te[0]->rows) {
 
 # call a compiled program to take care of the formatting, it gets the
 # string passed as one string
-exec "./hsrmgradeformatter \'$line\'";
+exec "/usr/local/bin/hsrmgradeformatter \'$line\'";
