@@ -36,3 +36,7 @@ Usage
 ---
 Just fire away with `getgrades` and you'll get all your grades formatted
 in a table with some additional information.
+
+Thanks
+---
+Thanks to @jens-na for letting me steal some of his stuff / get inspired by his `studipget`.
