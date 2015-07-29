@@ -38,6 +38,14 @@ Usage
 Just fire away with `getgrades` and you'll get all your grades formatted
 in a table with some additional information.
 
+Limits
+---
+As it is now this script only connects to the qis instance of the server 
+of the University of Applied Sciences and checks for the major computer 
+science with a Bachelor's degree.
+You can of course change the source code to fit your needs, but most of 
+it is hardwired so you'll need to edit the code itself.
+
 Thanks
 ---
 Thanks to [[@jens-na](https://github.com/jens-na)] for letting me steal some of his stuff from / get inspired by his
