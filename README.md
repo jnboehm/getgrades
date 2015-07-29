@@ -41,8 +41,8 @@ in a table with some additional information.
 Limits
 ---
 As it is now this script only connects to the qis instance of the server 
-of the University of Applied Sciences and checks for the major computer 
-science with a Bachelor's degree.
+of the Hochschule RheinMain, University of Applied Sciences and checks 
+for the major computer science with a Bachelor's degree.
 You can of course change the source code to fit your needs, but most of 
 it is hardwired so you'll need to edit the code itself.
 
