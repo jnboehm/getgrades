@@ -39,4 +39,5 @@ in a table with some additional information.
 
 Thanks
 ---
-Thanks to [@jens-na(https://github.com/jens-na)] for letting me steal some of his stuff from / get inspired by his `studipget`.
+Thanks to [[@jens-na](https://github.com/jens-na)] for letting me steal some of his stuff from / get inspired by his
+repository `studipget`.
