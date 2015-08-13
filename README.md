@@ -38,6 +38,31 @@ Usage
 Just fire away with `getgrades` and you'll get all your grades formatted
 in a table with some additional information.
 
+Sample output:
+```
+.------+---------------------------+------+----------+------.
+| Nr   | Modul                     | Note | Semester | CrPt |
+|------+---------------------------+------+----------+------|
+|  100 | Anzahl CP 1. Fachsemester |      |          | 30,0 |
+|      |                           |      |          |      |
+|  200 | Anzahl CP 1. & 2. Fachsem |      |          | 40,0 |
+|      |                           |      |          |      |
+|  300 | Anzahl CP 1. - 3. Fachsem |      |          | 40,0 |
+|      |                           |      |          |      |
+|  400 | Zulassung Bachelor-Arbeit |      |          | 40,0 |
+|      |                           |      |          |      |
+...
+| 2210 | Lineare Algebra           |  5,0 |          |  5,0 |
+| 2211 |   - Klausur               |  5,0 | SoSe 15  |  4,0 |
+| 2212 |   - Seminar               |  5,0 | SoSe 15  |  1,0 |
+|      |                           |      |          |      |
+| 4110 | Automatentheorie und Form |      |          |  0,0 |
+| 4111 |   - Klausur               |  5,0 | SoSe 15  |  4,0 |
+|      |                           |      |          |      |
+| 9003 | Durchschnittsnote Deutsch |  1,0 |          |  0,0 |
+`------+---------------------------+------+----------+------´
+```
+
 Limits
 ---
 As it is now this script only connects to the qis instance of the server 
