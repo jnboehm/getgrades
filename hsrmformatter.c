@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include "hsrmgradeformatter.h"
+#include "hsrmformatter.h"
 
 char *klausur = " - Klausur";
 char *cons = " ";
