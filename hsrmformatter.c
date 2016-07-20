@@ -60,18 +60,21 @@ module *create_module(char **table_string)
     text = delete_whitespace(text);
 //    printf("Termin written.\n");
   }
-  
-  if(isdigit(*text)  && !isdigit(*(text+1)))
+
+  if(isdigit(*text)  && *text != '0' && !isdigit(*(text+1)))
   {
     write_data(m->grade,&text);
     text = delete_whitespace(text);
 //    printf("Grade written. %s\n",m->grade);
   }
-  
-  write_data(m->status,&text);
-  text = delete_whitespace(text);
+
+  if(!isdigit(*text))
+  {
+    write_data(m->status,&text);
 //  printf("Status written. %s\n",m->status);
-  
+  }
+
+  text = delete_whitespace(text);
   write_data(m->credit_points,&text);
 
   text = find_end_of_module(text);
