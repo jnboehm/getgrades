@@ -25,12 +25,13 @@ void write_data(char* into, char** text)
 
 char *find_end_of_module(char *text)
 {
+  // lolol this is so shitty
   while((*text != 'E' && *(text+1) != 'N' && *(text+2) != 'D' &&
          *(text+3) != 'O' && *(text+4) != 'F') && *text != '\0')
     text++;
   return text+11;
 }
-        
+
 module *create_module(char **table_string)
 {
   char *text = *table_string;
@@ -40,11 +41,11 @@ module *create_module(char **table_string)
   text = delete_whitespace(text);
   write_data(m->course_number,&text);
 //  printf("Number written. %s\n", m->course_number);
-  
+
   text = delete_whitespace(text);
   write_data(m->course_desc,&text);
 //  printf("Description written.\n");
-  
+
   text = delete_whitespace(text);
   if(*text == 'W' || *text == 'S')
   {
@@ -52,7 +53,7 @@ module *create_module(char **table_string)
     text = delete_whitespace(text);
 //    printf("Semester written.\n");
   }
-  
+
   if(*text == '0' && isdigit(*(text+1)))
   {
     write_data(m->termin,&text);
@@ -72,26 +73,26 @@ module *create_module(char **table_string)
 //  printf("Status written. %s\n",m->status);
   
   write_data(m->credit_points,&text);
-  
+
   text = find_end_of_module(text);
-  
+
   *table_string = text;
 //  printf("Finishing up, table_string should now be at %c and the address: %x\n", *text, *table_string);
   return m;
 }
-                       
+
 
 modarray sort_data(char *table_string)
 {
   module *m,*old;
   int j=0,first=1;
   modarray modarr;
-  
+
   while(*table_string)
   {
     old = m;
     m = create_module(&table_string);
-    j++; 
+    j++;
     if(first)
     {
       modarr.modulepointer = m;
@@ -131,7 +132,7 @@ void print_module(module m, module *prev)
       strcpy(str, m.course_desc);
       printf("|      |                           |      |          |      |\n");
     }
-      
+
   } else {
     strcpy(str, m.course_desc);
   }
@@ -155,7 +156,7 @@ void print_all(module *m)
   }
   printf("`------+---------------------------+------+----------+------´\n");
 }
-    
+
 
 int main(int argc, char** argv)
 {
@@ -168,6 +169,6 @@ int main(int argc, char** argv)
   modarray ma = sort_data(tab_data);
   print_all(ma.modulepointer);
 
-  
+
   return 0;
 }
