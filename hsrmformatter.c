@@ -139,7 +139,7 @@ void print_module(module m, module *prev)
   } else {
     strcpy(str, m.course_desc);
   }
-  printf("| %4s | %-25.25s | %4s | %-8.8s | %4s |\n",
+  printf("| %4s | %-25.25s | %4s | %-8.8s | %4.4s |\n",
          m.course_number, str, m.grade, m.sem,
          m.credit_points);
   free(str);
