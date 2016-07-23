@@ -2,7 +2,7 @@
 
 ## Caveat: it will only display the last line of the diff it creates so if
 ## there's a bigger change in your grades it will not find out. Also it does not
-## tell you which module the new grade belonogs to – unless you can identify it
+## tell you which module the new grade belongs to – unless you can identify it
 ## by its’ course ID.
 
 ## An option to let it run repeadetly in a loop:
