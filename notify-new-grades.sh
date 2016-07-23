@@ -20,7 +20,7 @@ fi
 
 if [ -f ~/.config/getgrades/.last-lookup.txt ];
 then
-    DIFF=$(diff ~/.config/getgrades/.last-lookup.txt ~/.config/getgrades/.latest-lookup.txt)
+    DIFF=$(diff --changed-group-format='%>' --unchanged-group-format='' ~/.config/getgrades/.last-lookup.txt ~/.config/getgrades/.latest-lookup.txt | sed 's/^\t//g')
     if [[ $DIFF ]];
     then
         # Maybe it should just say that a new grade appeared
