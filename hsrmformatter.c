@@ -133,13 +133,13 @@ void print_module(module m, module *prev)
         strcat(str, klausur);
     } else {
       strcpy(str, m.course_desc);
-      printf("|      |                           |      |          |      |\n");
+      printf("|      |                           |      |          |       |\n");
     }
 
   } else {
     strcpy(str, m.course_desc);
   }
-  printf("| %4s | %-25.25s | %4s | %-8.8s | %4.4s |\n",
+  printf("| %4s | %-25.25s | %4s | %-8.8s | %5.5s |\n",
          m.course_number, str, m.grade, m.sem,
          m.credit_points);
   free(str);
@@ -148,16 +148,16 @@ void print_module(module m, module *prev)
 void print_all(module *m)
 {
   module *old;
-  printf(".------+---------------------------+------+----------+------.\n");
-  printf("| Nr   | Modul                     | Note | Semester | CrPt |\n");
-  printf("|------+---------------------------+------+----------+------|\n");
+  printf(".------+---------------------------+------+----------+-------.\n");
+  printf("| Nr   | Modul                     | Note | Semester |  CrPt |\n");
+  printf("|------+---------------------------+------+----------+-------|\n");
   while(m != NULL)
   {
     print_module(*m,old);
     old = m;
     m = m->next;
   }
-  printf("`------+---------------------------+------+----------+------´\n");
+  printf("`------+---------------------------+------+----------+-------´\n");
 }
 
 
