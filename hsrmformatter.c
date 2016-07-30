@@ -139,6 +139,10 @@ void print_module(module m, module *prev)
   } else {
     strcpy(str, m.course_desc);
   }
+
+  /* super ugly hack to kill the umlaut ä in the title. */
+  if(str[6] == -61 && str[7] == -92)
+    str[6] = 'a', str[7] = 'e';
   printf("| %4s | %-25.25s | %4s | %-8.8s | %5.5s |\n",
          m.course_number, str, m.grade, m.sem,
          m.credit_points);
@@ -149,7 +153,7 @@ void print_all(module *m)
 {
   module *old;
   printf(".------+---------------------------+------+----------+-------.\n");
-  printf("| Nr   | Modul                     | Note | Semester |  CrPt |\n");
+  printf("| Nr   | Modul                     | Note | Semester | CrPt  |\n");
   printf("|------+---------------------------+------+----------+-------|\n");
   while(m != NULL)
   {
