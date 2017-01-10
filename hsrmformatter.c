@@ -140,9 +140,15 @@ void print_module(module m, module *prev)
     strcpy(str, m.course_desc);
   }
 
-  /* super ugly hack to kill the umlaut ä in the title. */
-  if(str[6] == -61 && str[7] == -92)
-    str[6] = 'a', str[7] = 'e';
+  for (int i = 0; i < 254; ++i) {
+      /* super ugly hack to kill the umlaut ä in the course title. */
+      if(str[i] == -61 && str[i + 1] == -92)
+          str[i] = 'a', str[i + 1] = 'e';
+      /* super ugly hack to kill the umlaut ü in the course title. */
+      if(str[i] == -61 && str[i + 1] == -68)
+          str[i] = 'u', str[i + 1] = 'e';
+  }
+
   printf("| %4s | %-25.25s | %4s | %-8.8s | %5.5s |\n",
          m.course_number, str, m.grade, m.sem,
          m.credit_points);
